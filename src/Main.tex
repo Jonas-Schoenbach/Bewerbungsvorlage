@@ -12,17 +12,20 @@
 \recomputelengths
 \begin{document}
     % Anschreiben -------------------------------------------
+    \pdfbookmark[0]{Anschreiben}{anschreiben}
     \input{Anschreiben}
     \lfoot{\color{grau}Anlagen: \attachments} % Fußzeile setzen
     \clearpage
     
     % Lebenslauf ---------------------------------------------
+    \pdfbookmark[0]{Lebenslauf}{lebenslauf}
     \input{Lebenslauf}
     \lfoot{\currentPlace, \today}
     \clearpage
     \lfoot{} % Fußzeile leeren
 
-    % Anlagen -----------------------------------------------
+    % Anlagen ------------------------------------------------
+    \pdfbookmark[0]{Fähigkeiten}{faehigkeiten}
     \input{Skills}
     %\includepdf{Assets/berufsschulzeugnis.pdf}
 \end{document}
