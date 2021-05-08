@@ -1,0 +1,25 @@
+% !TEX root = ../Main.tex
+
+\newcommand{\skillSection}[1]
+{
+    \colorbox{sectcol}
+    {
+        \rule[-.3\baselineskip]{0pt}{\baselineskip}
+        \makebox[\linewidth - 15px][l]
+        {
+            \textcolor{white}{$\ggg$\xspace\textbf{#1}}
+        }
+    }
+}
+
+% Source: https://tex.stackexchange.com/a/416198
+\newcommand\skills[1]
+{ 
+    \begin{tikzpicture}
+        \foreach [count=\i] \x/\y in {#1}
+        {
+            \draw[fill=softcolbg,softcolbg] (0,\i) rectangle (8,\i+0.4);
+            \draw[fill=softcol,softcol](0,\i) rectangle (\y*2,\i+0.4); \node[above right] at (0,\i+0.4) {\x};
+        }
+    \end{tikzpicture}
+}

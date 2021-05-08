@@ -1,0 +1,28 @@
+\documentclass[11pt, a4paper, final]{moderncv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\include{_Config/ModernCV_Fix}
+\include{_Config/Packages}
+\include{_Config/Meta}
+\include{_Config/Settings}
+\include{_Config/SkillCommands}
+\include{_Config/Colors}
+
+\recomputelengths
+\begin{document}
+    % Anschreiben -------------------------------------------
+    \input{Anschreiben}
+    \lfoot{\color{grau}Anlagen: \attachments} % Fußzeile setzen
+    \clearpage
+    
+    % Lebenslauf ---------------------------------------------
+    \input{Lebenslauf}
+    \lfoot{\currentPlace, \today}
+    \clearpage
+    \lfoot{} % Fußzeile leeren
+
+    % Anlagen -----------------------------------------------
+    \input{Skills}
+    %\includepdf{Assets/berufsschulzeugnis.pdf}
+\end{document}

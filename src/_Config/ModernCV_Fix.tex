@@ -1,0 +1,27 @@
+% !TEX root = ../Main.tex
+
+% Source: https://tex.stackexchange.com/a/260448
+
+% loads a header variant
+% usage: \moderncvhead[<optional head option>]{<header variant number>}
+\renewcommand*{\moderncvhead}[2][]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage[#1]{moderncvhead\ifcase#2\or i\or ii\or iii\or iv\or v\fi}%
+  }\x 
+}
+
+% loads a body variant
+% usage: \moderncvbody[<optional body option>]{<body variant number>}
+\renewcommand*{\moderncvbody}[2][]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage[#1]{moderncvbody\ifcase#2\or i\or ii\or iii\or iv\or v\fi}%
+  }\x 
+}
+
+% loads a footer variant
+% usage: \moderncvfoot{<footer variant number>}
+\renewcommand*{\moderncvfoot}[1]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage{moderncvfoot\ifcase#1\or i\or ii\or iii\or iv\or v\fi}%
+  }\x
+}
