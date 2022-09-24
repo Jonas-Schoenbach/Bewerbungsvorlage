@@ -1,0 +1,13 @@
+% !TEX root = ../Main.tex
+
+% Source:https://github.com/schlcht/microtype/issues/19
+
+\makeatletter
+\MT@redefine@patch{eqnum}{%
+  \MT@patch@patch\tagform@{(}{\leftprotrusion{(}}%
+  \MT@patch@patch\tagform@{)}{\rightprotrusion{)}}%
+  \MT@ifdefined@n@TF{eqref }
+    {\MT@exp@cs\MT@patch@patch{eqref }}{\MT@patch@patch\eqref}
+       {\tagform@}{\@nameuse{MT@patch@saved@\string\tagform@}}%
+}{}
+\makeatother

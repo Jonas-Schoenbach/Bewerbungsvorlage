@@ -2,15 +2,23 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\include{_Config/ModernCV_Fix}
-\include{_Config/Packages}
-\include{_Config/Meta}
-\include{_Config/Settings}
-\include{_Config/SkillCommands}
-\include{_Config/Colors}
+\input{_Config/ModernCV_Fix}
+\input{_Config/Microtype_Fix.tex}
+\input{_Config/Packages}
+\input{_Config/Meta}
+\input{_Config/Settings}
+\input{_Config/SkillCommands}
+\input{_Config/Colors}
 
 \recomputelengths
 \begin{document}
+    \hypersetup{
+      pdfauthor={\authorFullName},
+      pdftitle={\subject},
+      pdfsubject={},
+      pdfkeywords={},
+      pdfcreator={}
+    }
     % Anschreiben -------------------------------------------
     \pdfbookmark[0]{Anschreiben}{anschreiben}
     \input{Anschreiben}
